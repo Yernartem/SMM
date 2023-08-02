@@ -1,0 +1,159 @@
+.module {
+  &__content {
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    // margin-left: 15%;
+    // margin-right: 15%;
+    color: black;
+    gap: 8rem;
+  }
+
+  &__video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+  }
+
+  &__contentTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+  }
+
+  &__descr {
+  }
+
+  &__list {
+    align-self: baseline;
+    padding: 0 0 0 20px;
+    li {
+      list-style-type: decimal;
+    }
+  }
+
+  &__deadline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    // margin-bottom: 10%;
+    padding: 1rem;
+    // width: 500px;
+    // height: 200px;
+
+    border: rgb(151, 146, 146) 2px solid;
+    border-radius: 3px;
+  }
+
+  &__homework {
+    margin: 20px;
+    padding: 20px 20px;
+    background-color: #c19adf;
+    width: 50%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:hover {
+      background-color: #c389f0;
+    }
+  }
+
+  &__summary {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px 20px;
+    background-color: #c19adf;
+    width: 50%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    // margin-left: auto;
+    // margin-left: 10%;
+
+    &:hover {
+      background-color: #c389f0;
+    }
+  }
+}
+
+.content {
+  margin: 0 4rem;
+}
+.lesson {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  &__lesson {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .module {
+    &__content {
+      gap: 2rem;
+    }
+  }
+  .content {
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .module {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .module {
+    &__content {
+      gap: 2rem;
+    }
+    &__deadline {
+      text-align: center;
+    }
+  }
+  .content {
+    margin: 0;
+  }
+}

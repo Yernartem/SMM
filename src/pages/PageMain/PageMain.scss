@@ -1,0 +1,227 @@
+.hr {
+  border: none;
+  border-top: 1px solid rgb(189, 176, 176);
+  width: 80%;
+  margin-top: 0;
+}
+
+@keyframes arrowFade {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.image {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-image: url('../../assets/arrowDown.svg');
+    background-size: cover;
+    cursor: pointer;
+    animation: arrowFade 2s infinite;
+  }
+
+  &__avatar {
+    position: fixed;
+    top: 20px;
+    right: 2%;
+    width: 60px;
+    height: 60px;
+    background-image: url('../../assets/userIcon.svg');
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__main {
+    width: 100%;
+    // height: auto; /* This will maintain the aspect ratio */
+    // min-height: 100vh;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    @media screen and (max-width: 600px) {
+      font-size: 22px;
+    }
+  }
+}
+
+.main {
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+  }
+
+  &__title {
+    color: black;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 32px;
+
+    @media screen and (max-width: 1220px) {
+      font-size: 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+      font-size: 22px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: 450px) {
+      font-size: 16px;
+    }
+  }
+
+  .knowledges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+    // width: 320px;
+    color: black;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+
+    @media screen and (max-width: 850px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
+
+    &__block {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      height: 200px;
+      width: 200px;
+      background-color: rgb(215, 210, 210);
+      border-radius: 3px;
+      @media screen and (max-width: 576px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  background-color: #e6c8fe;
+  padding: 20px;
+  text-align: center;
+  gap: 20px;
+
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__section {
+    display: inline-block;
+    flex: 1;
+    margin-bottom: 20px;
+  }
+
+  &__about-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  &__contact-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  &__about {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  &__contacts {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__contact {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(216, 17, 17, 0.07);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 6, 6, 0.4);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

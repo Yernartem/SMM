@@ -1,0 +1,284 @@
+hr {
+  border: none;
+  border-top: 1px solid rgb(189, 176, 176);
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.hr__black {
+  border: none;
+  border-top: 1px solid rgb(10, 10, 10);
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.arrow__left img {
+  position: absolute;
+  position: fixed;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.module {
+  margin-top: 20px;
+  gap: 10px;
+  color: black;
+
+  &__content-lesson {
+    display: flex;
+    // justify-content:space-between;
+    gap: 2rem;
+    font-size: 1.25rem;
+    // margin: 0 4rem;
+    // margin: 20px;
+    // margin-left: 10%;
+    // margin-right: 10%;
+  }
+
+  &__content-text {
+    display: flex;
+    font-size: 1.25rem;
+    // justify-content:space-between;
+    gap: 10%;
+    // margin: 20px;
+    // margin-left: 15%;
+    // margin-right: 15%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    color: #c389f0;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  &__topic {
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+
+  &__lesson {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .content {
+    margin: 0 4rem;
+  }
+
+  .lesson {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+      // margin: 0 4rem;
+      // gap: 30px;
+    }
+
+    &__content--two {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      // width: 1000px;
+      color: black;
+    }
+
+    &__content-two {
+      display: flex;
+      gap: 8rem;
+
+      // margin-left: 10%;
+      // margin-right: 10%;
+    }
+
+    &__title {
+      color: black;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    &__content--three {
+      // max-width: 1000px;
+    }
+
+    // &__descr--three {
+    //   margin-top: 10%;;
+    // }
+
+    &__text--three {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 2rem;
+    }
+
+    &__description {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    &__two--text {
+      color: black;
+      font-size: 1.25rem;
+    }
+
+    &__two--list {
+      margin-bottom: 2rem;
+    }
+
+    &__video--1 {
+      // width: 1000px;
+      flex: 1;
+    }
+
+    &__video {
+      width: 2000px;
+    }
+
+    &__img img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      min-width: 300px;
+      // height: 300px;
+    }
+
+    &__descr {
+      word-wrap: break-word;
+      color: black;
+      p {
+        margin: 0;
+        margin-bottom: 1em;
+      }
+    }
+
+    &__descr--text {
+      margin-left: 10%;
+      margin-right: 10%;
+      word-wrap: break-word;
+      color: black;
+    }
+
+    &__skills {
+      color: black;
+      word-wrap: break-word;
+    }
+
+    &__homework {
+      // margin: 20px;
+      // margin-top: 1.5rem;
+      padding: 20px 20px;
+      background-color: #c19adf;
+      width: 50%;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:hover {
+        background-color: #c389f0;
+      }
+    }
+
+    &__summary {
+      // margin: 20px;
+      padding: 20px 20px;
+      background-color: #c19adf;
+      width: 50%;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:hover {
+        background-color: #c389f0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .module {
+    .lesson {
+      &__content-two {
+        gap: 2rem;
+      }
+      &__two--list {
+        li {
+          white-space: normal;
+        }
+      }
+    }
+    &__content-text {
+      gap: 2rem;
+    }
+    .content {
+      margin: 0 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .module {
+    &__content-lesson {
+      flex-direction: column-reverse;
+    }
+    &__content-text {
+      flex-direction: column;
+    }
+  }
+  .lesson {
+    &__content-two {
+      flex-direction: column;
+    }
+    &__two--list {
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .module {
+    .lesson__homework {
+      width: 100%;
+    }
+    .lesson__img img {
+      min-width: auto;
+    }
+    .content {
+      margin: 0;
+    }
+  }
+}
